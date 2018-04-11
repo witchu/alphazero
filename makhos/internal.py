@@ -370,7 +370,7 @@ def to_string(board):
 def _to_line(board, y):
     b = board[y]
     m = y % 2
-    return ''.join([_to_char(b[x], x, m) for x in range(BOARD_SIZE)]) + '        ' + ''.join([_to_char(b[BOARD_SIZE - x - 1], BOARD_SIZE - x - 1, m) for x in range(BOARD_SIZE)])
+    return ''.join([_to_char(b[x], x, m) for x in range(BOARD_SIZE)])
 
 def _to_char(v, x, m):
     if x % 2 != m: return ' '

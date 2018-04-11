@@ -20,13 +20,19 @@ Board Game Reinforcement Learning ที่อ้างอิงจาก [Alpha
 pip install -r requirements.txt
 ```
 
+## ลองเล่นกับ pretrained model
+
+```
+python run.py arena makhos human mcts,data/makhos/model-45k.h5,1000
+```
+
 ## สร้าง Model
 ```
 python run.py newmodel <game> model.h5
 ```
 
 ## Self-play
-เล่นกับตัวเอง 5,000 เกม โดยแต่ละตาที่เดินมีการซิิมมูเลชั่น 100 ครั้ง และเซฟข้อมูลเกมลงไฟล์ selfplay.txt
+เล่นกับตัวเอง 5,000 เกม โดยแต่ละตาที่เดินมีการซิมมูเลชั่น 100 ครั้ง และเซฟข้อมูลเกมลงไฟล์ selfplay.txt
 ```
 python run.py generate <game> --model model.h5 --simulation 100 -n 5000 --file selfplay.txt --progress
 ```
